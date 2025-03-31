@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Diretores e Filmes</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+    <main>
+        <h1>Cadastro de Diretores e Filmes</h1>
+   
+        <div class="form-container">
+            <div class="cadastroDiretor">
+                <div class="cadastroDiretor">
+                    <h2>Cadastro de Diretores</h2>
+    
+                    <form id="formDiretor">
+                        <label for="diretorNome">Nome do Diretor:</label>
+                        <input type="text" id="diretorNome" name="nome" required>
+    
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="data_nascimento" required>
+    
+                        <button type="submit" id="adicionarDiretor">Adicionar Diretor</button>
+                    </form>
+    
+                    <button id="loadDiretores">Carregar Diretores</button>
+                    <div id="diretorid"></div>
+                </div>
+            </div>
+            
+
+               
+
+            <div class="cadastroFilme">
+                <h2>Cadastro de Filmes</h2>
+                <form>
+                    <label for="filmeNome">Nome do Filme</label>
+                    <input type="text" id="filmeNome" name="filmeNome">
+
+                    <label for="filmeDescricao">Descrição do Filme:</label>
+                    <textarea id="filmeDescricao" name="filmeDescricao" required></textarea>
+
+                    <label for="diretorNome">Nome do Diretor:</label>
+                    <input type="text" id="diretorNome" name="diretorNome" required>
+
+                    <label for="anoLancamento">Ano de Lançamento:</label>
+                    <input type="number" id="anoLancamento" name="anoLancamento" min="1900" max="2099" required>
+
+                    <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" name="genero" required>
+
+                    <label for="duracao">Duração (min):</label>
+                    <input type="number" id="duracao" name="duracao" required>
+
+                    <label for="filmeImgUrl" class="file-label" >Imagem do Filme:</label>
+                    <input type="file" id="filmeImgUrl" name="imagem" class="file-input" required>
+
+                    <button id="adicionarFilme">Adicionar Filme</button>
+                </form>
+
+                <button id="loadFilmes">Carregar Filmes</button>
+                <div id="filmeid"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../filme.js"></script>
+    <script src="../diretor.js"></script>
+</body>
+</html>
